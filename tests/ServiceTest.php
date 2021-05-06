@@ -10,7 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 class ServiceTest extends KernelTestCase
 {
-//    use ReloadDatabaseTrait;
+    use ReloadDatabaseTrait;
 
     public function testService():void
     {
