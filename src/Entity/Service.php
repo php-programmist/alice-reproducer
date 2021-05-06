@@ -23,7 +23,7 @@ class Service
     private $name;
 
     /**
-     * @ORM\OneToOne(targetEntity=AbstractAccessType::class, mappedBy="service", cascade={"persist", "remove"})
+     * @ORM\OneToOne(targetEntity=Oauth2AccessType::class, mappedBy="service", cascade={"persist", "remove"})
      */
     private $accessType;
 
@@ -44,12 +44,12 @@ class Service
         return $this;
     }
 
-    public function getAccessType(): ?AbstractAccessType
+    public function getAccessType(): ?Oauth2AccessType
     {
         return $this->accessType;
     }
 
-    public function setAccessType(AbstractAccessType $accessType): self
+    public function setAccessType(Oauth2AccessType $accessType): self
     {
         // set the owning side of the relation if necessary
         if ($accessType->getService() !== $this) {
