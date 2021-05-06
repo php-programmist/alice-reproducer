@@ -1,0 +1,4 @@
+App\Entity\Oauth2AccessType:
+    accessType1:
+        name: 'test'
+        service: '@service1'
