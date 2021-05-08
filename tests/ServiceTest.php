@@ -16,6 +16,7 @@ class ServiceTest extends KernelTestCase
     {
         self::bootKernel();
         $em = self::$container->get('doctrine')->getManager();
+        $em->clear();
         $service = $em->getRepository(Service::class)->findOneBy(['name'=> 'Twitter']);
         dd($service->getAccessType());
     }
